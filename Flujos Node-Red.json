@@ -1,0 +1,1028 @@
+[
+    {
+        "id": "aa6110dbaebb1c45",
+        "type": "tab",
+        "label": "SecurityIoT",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "e38a535eec0e5210",
+        "type": "group",
+        "z": "aa6110dbaebb1c45",
+        "name": "Movimiento",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "e196c887aa1ca308",
+            "8c4eee06784f1b8f",
+            "2ee9d7e73cfd6576",
+            "be4bff600e0e61ab",
+            "f2c016bebbb21ff0",
+            "56685da1bd467868",
+            "16e67b7a69506803",
+            "dd3c2f90f4695db3",
+            "ae7a80ec17516cbf"
+        ],
+        "x": 754,
+        "y": 19,
+        "w": 712,
+        "h": 282
+    },
+    {
+        "id": "55a02a01cd69f87a",
+        "type": "group",
+        "z": "aa6110dbaebb1c45",
+        "style": {
+            "stroke": "#999999",
+            "stroke-opacity": "1",
+            "fill": "none",
+            "fill-opacity": "1",
+            "label": true,
+            "label-position": "nw",
+            "color": "#a4a4a4"
+        },
+        "nodes": [
+            "a926e3f3555c09da",
+            "1a562e760b1ca1be",
+            "bf1d23fcada7c8ab",
+            "f16b0b30bb904431",
+            "8168018309afbe04",
+            "863a7c6fe83d51de",
+            "62cbcb02b10fdcfb",
+            "eeb2e2deafd4e4a6",
+            "83ea872b580d0b31"
+        ],
+        "x": 754,
+        "y": 339,
+        "w": 792,
+        "h": 302
+    },
+    {
+        "id": "be8017126b31788a",
+        "type": "group",
+        "z": "aa6110dbaebb1c45",
+        "style": {
+            "stroke": "#999999",
+            "stroke-opacity": "1",
+            "fill": "none",
+            "fill-opacity": "1",
+            "label": true,
+            "label-position": "nw",
+            "color": "#a4a4a4"
+        },
+        "nodes": [
+            "653acdaf53954602",
+            "dc78453b50816a33",
+            "245e2bab4f8106d1",
+            "a55b30c95b061008",
+            "dd0b80d043f2cece",
+            "357f5074d1c3d613",
+            "f74c4d177fa23065",
+            "e78675ef13b3a005",
+            "642f313ffeee725a",
+            "1c245c75d6a3be71",
+            "05fb4d06594a3030",
+            "d3305dbdf5f223da"
+        ],
+        "x": 74,
+        "y": 19,
+        "w": 672,
+        "h": 342
+    },
+    {
+        "id": "6fac784a592fa889",
+        "type": "group",
+        "z": "aa6110dbaebb1c45",
+        "style": {
+            "stroke": "#999999",
+            "stroke-opacity": "1",
+            "fill": "none",
+            "fill-opacity": "1",
+            "label": true,
+            "label-position": "nw",
+            "color": "#a4a4a4"
+        },
+        "nodes": [
+            "f0a6083ec7d0f675",
+            "0eb64bb074a386eb",
+            "55c2ed9dbb7a8bab",
+            "78327c833833bc30",
+            "f1e26e29121aba08",
+            "333d3caff6088196",
+            "62146da53661ee5a"
+        ],
+        "x": 74,
+        "y": 379,
+        "w": 632,
+        "h": 202
+    },
+    {
+        "id": "653acdaf53954602",
+        "type": "mqtt in",
+        "z": "aa6110dbaebb1c45",
+        "g": "be8017126b31788a",
+        "name": "",
+        "topic": "camara/estado",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "broker",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 260,
+        "y": 140,
+        "wires": [
+            [
+                "dc78453b50816a33"
+            ]
+        ]
+    },
+    {
+        "id": "dc78453b50816a33",
+        "type": "ui_text",
+        "z": "aa6110dbaebb1c45",
+        "g": "be8017126b31788a",
+        "group": "22de31d76a036c51",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Estado:",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "Century Gothic,CenturyGothic,AppleGothic,sans-serif",
+        "fontSize": "20",
+        "color": "#d80e0e",
+        "x": 640,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "245e2bab4f8106d1",
+        "type": "mqtt out",
+        "z": "aa6110dbaebb1c45",
+        "g": "be8017126b31788a",
+        "name": "",
+        "topic": "camara/control",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "broker",
+        "x": 600,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "a55b30c95b061008",
+        "type": "ui_switch",
+        "z": "aa6110dbaebb1c45",
+        "g": "be8017126b31788a",
+        "name": "",
+        "label": "Modo de Camara:",
+        "tooltip": "",
+        "group": "22de31d76a036c51",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "on",
+        "onvalueType": "str",
+        "onicon": "brightness_high",
+        "oncolor": "red",
+        "offvalue": "off",
+        "offvalueType": "str",
+        "officon": "brightness_low",
+        "offcolor": "green",
+        "animate": true,
+        "className": "",
+        "x": 190,
+        "y": 60,
+        "wires": [
+            [
+                "245e2bab4f8106d1",
+                "f74c4d177fa23065"
+            ]
+        ]
+    },
+    {
+        "id": "e196c887aa1ca308",
+        "type": "mqtt in",
+        "z": "aa6110dbaebb1c45",
+        "g": "e38a535eec0e5210",
+        "name": "",
+        "topic": "movimiento/detectado",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "broker",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 880,
+        "y": 60,
+        "wires": [
+            [
+                "dd3c2f90f4695db3",
+                "ae7a80ec17516cbf"
+            ]
+        ]
+    },
+    {
+        "id": "8c4eee06784f1b8f",
+        "type": "ui_text",
+        "z": "aa6110dbaebb1c45",
+        "g": "e38a535eec0e5210",
+        "group": "6b9335ce311616c9",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Evento: ",
+        "format": "{{msg.payload}} ",
+        "layout": "col-center",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 1380,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "2ee9d7e73cfd6576",
+        "type": "mqtt in",
+        "z": "aa6110dbaebb1c45",
+        "g": "e38a535eec0e5210",
+        "name": "",
+        "topic": "movimiento/valor",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "broker",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 860,
+        "y": 160,
+        "wires": [
+            [
+                "be4bff600e0e61ab"
+            ]
+        ]
+    },
+    {
+        "id": "be4bff600e0e61ab",
+        "type": "ui_chart",
+        "z": "aa6110dbaebb1c45",
+        "g": "e38a535eec0e5210",
+        "name": "",
+        "group": "6b9335ce311616c9",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "label": "Deteccion: ",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "dd HH:mm",
+        "interpolate": "cubic",
+        "nodata": "Sincronizando datos...",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "1",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "60",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 1050,
+        "y": 160,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "f0a6083ec7d0f675",
+        "type": "mqtt in",
+        "z": "aa6110dbaebb1c45",
+        "g": "6fac784a592fa889",
+        "name": "",
+        "topic": "humo/detectado",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "broker",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 180,
+        "y": 420,
+        "wires": [
+            [
+                "f1e26e29121aba08",
+                "333d3caff6088196"
+            ]
+        ]
+    },
+    {
+        "id": "0eb64bb074a386eb",
+        "type": "ui_text",
+        "z": "aa6110dbaebb1c45",
+        "g": "6fac784a592fa889",
+        "group": "f36c1d7d6cdf56aa",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Evento: ",
+        "format": "{{msg.payload}} ",
+        "layout": "col-center",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 620,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "55c2ed9dbb7a8bab",
+        "type": "mqtt in",
+        "z": "aa6110dbaebb1c45",
+        "g": "6fac784a592fa889",
+        "name": "",
+        "topic": "humo/valor",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "broker",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 180,
+        "y": 540,
+        "wires": [
+            [
+                "78327c833833bc30"
+            ]
+        ]
+    },
+    {
+        "id": "78327c833833bc30",
+        "type": "ui_chart",
+        "z": "aa6110dbaebb1c45",
+        "g": "6fac784a592fa889",
+        "name": "",
+        "group": "f36c1d7d6cdf56aa",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "label": "Deteccion: ",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "dd HH:mm",
+        "interpolate": "cubic",
+        "nodata": "Sincronizando datos...",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "1",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "60",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 470,
+        "y": 540,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "dd0b80d043f2cece",
+        "type": "mqtt in",
+        "z": "aa6110dbaebb1c45",
+        "g": "be8017126b31788a",
+        "name": "",
+        "topic": "camara/horario",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "broker",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 300,
+        "y": 260,
+        "wires": [
+            [
+                "357f5074d1c3d613"
+            ]
+        ]
+    },
+    {
+        "id": "357f5074d1c3d613",
+        "type": "ui_text",
+        "z": "aa6110dbaebb1c45",
+        "g": "be8017126b31788a",
+        "group": "22de31d76a036c51",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Horario: ",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 520,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "f2c016bebbb21ff0",
+        "type": "mqtt in",
+        "z": "aa6110dbaebb1c45",
+        "g": "e38a535eec0e5210",
+        "name": "",
+        "topic": "movimiento/ubicado",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "broker",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 870,
+        "y": 260,
+        "wires": [
+            [
+                "56685da1bd467868"
+            ]
+        ]
+    },
+    {
+        "id": "56685da1bd467868",
+        "type": "ui_text",
+        "z": "aa6110dbaebb1c45",
+        "g": "e38a535eec0e5210",
+        "group": "6b9335ce311616c9",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 1050,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "f74c4d177fa23065",
+        "type": "function",
+        "z": "aa6110dbaebb1c45",
+        "g": "be8017126b31788a",
+        "name": "function del control",
+        "func": "var nuevoEstado = msg.payload;\n\n// Determinar el estado a subir a Firebase\nvar estadoFirebase = (nuevoEstado === 'on') ?  '\"true\"' :'\"false\"';\n\n// Configurar el mensaje para el nodo de Firebase\nmsg.payload = estadoFirebase;\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 490,
+        "y": 120,
+        "wires": [
+            [
+                "e78675ef13b3a005"
+            ]
+        ]
+    },
+    {
+        "id": "e78675ef13b3a005",
+        "type": "firebase modify",
+        "z": "aa6110dbaebb1c45",
+        "g": "be8017126b31788a",
+        "name": "Envio",
+        "firebaseconfig": "",
+        "childpath": "HumanSafetyNew/Modo/Camara",
+        "method": "set",
+        "value": "msg.payload",
+        "priority": "msg.priority",
+        "x": 670,
+        "y": 120,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "642f313ffeee725a",
+        "type": "function",
+        "z": "aa6110dbaebb1c45",
+        "g": "be8017126b31788a",
+        "name": "function de estado",
+        "func": "var nuevoEstado = msg.payload;\n\n// Determinar el estado a subir a Firebase\nvar estadoFirebase = (nuevoEstado === 'true') ? 'Detectando Movimiento' : 'Camara en modo programado';\n\n// Configurar el mensaje para el nodo de Firebase\nmsg.payload = estadoFirebase;\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 410,
+        "y": 200,
+        "wires": [
+            [
+                "dc78453b50816a33"
+            ]
+        ]
+    },
+    {
+        "id": "1c245c75d6a3be71",
+        "type": "firebase.on",
+        "z": "aa6110dbaebb1c45",
+        "g": "be8017126b31788a",
+        "name": "Recibido",
+        "firebaseconfig": "",
+        "childpath": "HumanSafetyNew/Modo/Camara",
+        "atStart": true,
+        "eventType": "value",
+        "queries": [],
+        "x": 220,
+        "y": 200,
+        "wires": [
+            [
+                "642f313ffeee725a"
+            ]
+        ]
+    },
+    {
+        "id": "16e67b7a69506803",
+        "type": "firebase modify",
+        "z": "aa6110dbaebb1c45",
+        "g": "e38a535eec0e5210",
+        "name": "envio",
+        "firebaseconfig": "",
+        "childpath": "HumanSafetyNew/Deteccion/Movimiento",
+        "method": "set",
+        "value": "msg.payload",
+        "priority": "msg.priority",
+        "x": 1390,
+        "y": 120,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "dd3c2f90f4695db3",
+        "type": "function",
+        "z": "aa6110dbaebb1c45",
+        "g": "e38a535eec0e5210",
+        "name": "function del evento de movi",
+        "func": "var nuevoEstado = msg.payload;\n\n// Determinar el estado a subir a Firebase\nvar estadoFirebase = (nuevoEstado === 'ON') ? 'Movimiento Detectado --- Activando Camara' : 'No hay Movimiento Detectado';\n\n// Configurar el mensaje para el nodo de Firebase\nmsg.payload = estadoFirebase;\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1160,
+        "y": 60,
+        "wires": [
+            [
+                "8c4eee06784f1b8f"
+            ]
+        ]
+    },
+    {
+        "id": "f1e26e29121aba08",
+        "type": "function",
+        "z": "aa6110dbaebb1c45",
+        "g": "6fac784a592fa889",
+        "name": "funcion del evento",
+        "func": "var nuevoEstado = msg.payload;\n\n// Determinar el estado a subir a Firebase\nvar estadoFirebase = (nuevoEstado === 'ON') ? 'Humo Detectado --- Activando Alarma' : 'No hay presencia de humo';\n\n// Configurar el mensaje para el nodo de Firebase\nmsg.payload = estadoFirebase;\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 450,
+        "y": 420,
+        "wires": [
+            [
+                "0eb64bb074a386eb"
+            ]
+        ]
+    },
+    {
+        "id": "ae7a80ec17516cbf",
+        "type": "function",
+        "z": "aa6110dbaebb1c45",
+        "g": "e38a535eec0e5210",
+        "name": "envio de datos ",
+        "func": "var nuevoEstado = msg.payload;\n\n// Determinar el estado a subir a Firebase\nvar estadoFirebase = (nuevoEstado === 'ON') ? '\"true\"' : '\"false\"';\n\n// Configurar el mensaje para el nodo de Firebase\nmsg.payload = estadoFirebase;\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1120,
+        "y": 120,
+        "wires": [
+            [
+                "16e67b7a69506803"
+            ]
+        ]
+    },
+    {
+        "id": "333d3caff6088196",
+        "type": "function",
+        "z": "aa6110dbaebb1c45",
+        "g": "6fac784a592fa889",
+        "name": "function de envio de datos",
+        "func": "var nuevoEstado = msg.payload;\n\n// Determinar el estado a subir a Firebase\nvar estadoFirebase = (nuevoEstado === 'ON') ? '\"true\"' : '\"false\"';\n\n// Configurar el mensaje para el nodo de Firebase\nmsg.payload = estadoFirebase;\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 410,
+        "y": 480,
+        "wires": [
+            [
+                "62146da53661ee5a"
+            ]
+        ]
+    },
+    {
+        "id": "62146da53661ee5a",
+        "type": "firebase modify",
+        "z": "aa6110dbaebb1c45",
+        "g": "6fac784a592fa889",
+        "name": "envio",
+        "firebaseconfig": "",
+        "childpath": "HumanSafetyNew/Deteccion/Incendio",
+        "method": "set",
+        "value": "msg.payload",
+        "priority": "msg.priority",
+        "x": 610,
+        "y": 480,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a926e3f3555c09da",
+        "type": "mqtt in",
+        "z": "aa6110dbaebb1c45",
+        "g": "55a02a01cd69f87a",
+        "name": "",
+        "topic": "Hora/Camara",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "broker",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 850,
+        "y": 480,
+        "wires": [
+            [
+                "1a562e760b1ca1be",
+                "bf1d23fcada7c8ab",
+                "eeb2e2deafd4e4a6",
+                "83ea872b580d0b31"
+            ]
+        ]
+    },
+    {
+        "id": "1a562e760b1ca1be",
+        "type": "ui_text",
+        "z": "aa6110dbaebb1c45",
+        "g": "55a02a01cd69f87a",
+        "group": "22de31d76a036c51",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Hora:",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 1110,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "bf1d23fcada7c8ab",
+        "type": "firebase modify",
+        "z": "aa6110dbaebb1c45",
+        "g": "55a02a01cd69f87a",
+        "name": "Envio",
+        "firebaseconfig": "",
+        "childpath": "HumanSafetyNew/Hora/Camara",
+        "method": "set",
+        "value": "msg.payload",
+        "priority": "msg.priority",
+        "x": 1110,
+        "y": 500,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "f16b0b30bb904431",
+        "type": "mqtt in",
+        "z": "aa6110dbaebb1c45",
+        "g": "55a02a01cd69f87a",
+        "name": "",
+        "topic": "movimiento/detectado",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "broker",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 880,
+        "y": 560,
+        "wires": [
+            [
+                "eeb2e2deafd4e4a6"
+            ]
+        ]
+    },
+    {
+        "id": "8168018309afbe04",
+        "type": "firebase modify",
+        "z": "aa6110dbaebb1c45",
+        "g": "55a02a01cd69f87a",
+        "name": "Envio de Presencia",
+        "firebaseconfig": "",
+        "childpath": "HumanSafetyNew/Monitoreo/Presencia",
+        "method": "update",
+        "value": "msg.payload",
+        "priority": "msg.priority",
+        "x": 1430,
+        "y": 580,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "863a7c6fe83d51de",
+        "type": "firebase modify",
+        "z": "aa6110dbaebb1c45",
+        "g": "55a02a01cd69f87a",
+        "name": "Envio de Humo",
+        "firebaseconfig": "",
+        "childpath": "HumanSafetyNew/Monitoreo/Deteccion",
+        "method": "update",
+        "value": "msg.payload",
+        "priority": "msg.priority",
+        "x": 1380,
+        "y": 380,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "62cbcb02b10fdcfb",
+        "type": "mqtt in",
+        "z": "aa6110dbaebb1c45",
+        "g": "55a02a01cd69f87a",
+        "name": "",
+        "topic": "humo/detectado",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "broker",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 860,
+        "y": 380,
+        "wires": [
+            [
+                "83ea872b580d0b31"
+            ]
+        ]
+    },
+    {
+        "id": "05fb4d06594a3030",
+        "type": "mqtt in",
+        "z": "aa6110dbaebb1c45",
+        "g": "be8017126b31788a",
+        "name": "",
+        "topic": "camara/hora",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "broker",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 290,
+        "y": 320,
+        "wires": [
+            [
+                "d3305dbdf5f223da"
+            ]
+        ]
+    },
+    {
+        "id": "d3305dbdf5f223da",
+        "type": "ui_text",
+        "z": "aa6110dbaebb1c45",
+        "g": "be8017126b31788a",
+        "group": "22de31d76a036c51",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Hora: ",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 530,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "eeb2e2deafd4e4a6",
+        "type": "function",
+        "z": "aa6110dbaebb1c45",
+        "g": "55a02a01cd69f87a",
+        "name": "datos enviados de movi",
+        "func": "// Obtener el estado actual del relé\nvar nuevoEstado = msg.payload;\n\n// Obtener el último estado registrado del contexto global\nvar ultimoEstadoRegistrado = global.get('ultimoEstadoRegistrado') || '';\n\n// Obtener la hora almacenada del contexto\nvar horaCamara = context.get('horaCamara') || null;\n\n// Manejo del mensaje de detección de movimiento\nif (msg.topic === \"movimiento/detectado\" && nuevoEstado === \"ON\") {\n    // Verificar si la detección es diferente al último estado registrado\n    if (ultimoEstadoRegistrado !== \"ON\") {\n        // Verificar si ya se ha recibido la hora\n        if (horaCamara) {\n            // Obtener el número de detección actual y aumentarlo\n            var numDeteccion = context.get('numDeteccion') || 0;\n            numDeteccion++;\n            context.set('numDeteccion', numDeteccion);\n\n            // Crear el objeto de datos para subir a Firebase\n            var datoFirebase = {};\n            datoFirebase[`Numero ${numDeteccion}`] = {\n                fecha: horaCamara, // Usar la hora recibida\n                estado: \"ON\"\n            };\n\n            // Configurar el mensaje para el nodo de Firebase\n            msg.payload = JSON.stringify(datoFirebase);\n\n            // Guardar el nuevo valor del contador en el contexto global\n            global.set('contadorDetecciones', numDeteccion);\n\n            // Actualizar el último estado registrado\n            global.set('ultimoEstadoRegistrado', 'ON');\n\n            return msg;\n        } else {\n            // Si no hay hora, no enviar datos\n            return null;\n        }\n    } else {\n        // Si el estado sigue siendo \"encendido\" pero ya fue registrado, no hacemos nada\n        return null;\n    }\n} else if (msg.topic === \"movimiento/detectado\" && nuevoEstado !== \"ON\") {\n    // Si el estado cambia a algo que no es \"encendido\", actualizamos el último estado registrado\n    global.set('ultimoEstadoRegistrado', nuevoEstado);\n    // No enviamos nada a Firebase\n    return null;\n}\n\n// Manejo del mensaje del topic \"Hora/Camara\"\nif (msg.topic === \"Hora/Camara\") {\n    // Almacenar la hora recibida\n    horaCamara = msg.payload;\n\n    // Guardar la hora en el contexto\n    context.set('horaCamara', horaCamara);\n\n    // No se necesita devolver nada para este mensaje\n    return null;\n}\n\n// Si el mensaje no coincide con ninguno de los casos anteriores, no hacer nada\nreturn null;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1190,
+        "y": 600,
+        "wires": [
+            [
+                "8168018309afbe04"
+            ]
+        ]
+    },
+    {
+        "id": "83ea872b580d0b31",
+        "type": "function",
+        "z": "aa6110dbaebb1c45",
+        "g": "55a02a01cd69f87a",
+        "name": "datos enviados de humo",
+        "func": "// Obtener el estado actual del relé\nvar nuevoEstado = msg.payload;\n\n// Obtener el último estado registrado del contexto global\nvar ultimoEstadoRegistrado = global.get('ultimoEstadoRegistrado') || '';\n\n// Obtener la hora almacenada del contexto\nvar horaCamara = context.get('horaCamara') || null;\n\n// Manejo del mensaje de detección de movimiento\nif (msg.topic === \"humo/detectado\" && nuevoEstado === \"ON\") {\n    // Verificar si la detección es diferente al último estado registrado\n    if (ultimoEstadoRegistrado !== \"ON\") {\n        // Verificar si ya se ha recibido la hora\n        if (horaCamara) {\n            // Obtener el número de detección actual y aumentarlo\n            var numDeteccion = context.get('numDeteccion') || 0;\n            numDeteccion++;\n            context.set('numDeteccion', numDeteccion);\n\n            // Crear el objeto de datos para subir a Firebase\n            var datoFirebase = {};\n            datoFirebase[`Deteccion: ${numDeteccion}`] = {\n                fecha: horaCamara, // Usar la hora recibida\n                estado: \"ON\"\n            };\n\n            // Configurar el mensaje para el nodo de Firebase\n            msg.payload = JSON.stringify(datoFirebase);\n\n            // Guardar el nuevo valor del contador en el contexto global\n            global.set('contadorDetecciones', numDeteccion);\n\n            // Actualizar el último estado registrado\n            global.set('ultimoEstadoRegistrado', 'ON');\n\n            return msg;\n        } else {\n            // Si no hay hora, no enviar datos\n            return null;\n        }\n    } else {\n        // Si el estado sigue siendo \"encendido\" pero ya fue registrado, no hacemos nada\n        return null;\n    }\n} else if (msg.topic === \"humo/detectado\" && nuevoEstado !== \"ON\") {\n    // Si el estado cambia a algo que no es \"encendido\", actualizamos el último estado registrado\n    global.set('ultimoEstadoRegistrado', nuevoEstado);\n    // No enviamos nada a Firebase\n    return null;\n}\n\n// Manejo del mensaje del topic \"Hora/Camara\"\nif (msg.topic === \"Hora/Camara\") {\n    // Almacenar la hora recibida\n    horaCamara = msg.payload;\n\n    // Guardar la hora en el contexto\n    context.set('horaCamara', horaCamara);\n\n    // No se necesita devolver nada para este mensaje\n    return null;\n}\n\n// Si el mensaje no coincide con ninguno de los casos anteriores, no hacer nada\nreturn null;\n\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1150,
+        "y": 380,
+        "wires": [
+            [
+                "863a7c6fe83d51de"
+            ]
+        ]
+    },
+    {
+        "id": "broker",
+        "type": "mqtt-broker",
+        "name": "SecurityDomotic",
+        "broker": "192.168.2.7",
+        "port": "1888",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "compatmode": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "22de31d76a036c51",
+        "type": "ui_group",
+        "name": "Activación de Camara Manualmente",
+        "tab": "8ef07724bfb2949c",
+        "order": 2,
+        "disp": true,
+        "width": 8,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "6b9335ce311616c9",
+        "type": "ui_group",
+        "name": "Detección de Movimiento",
+        "tab": "8ef07724bfb2949c",
+        "order": 1,
+        "disp": true,
+        "width": 8,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "f36c1d7d6cdf56aa",
+        "type": "ui_group",
+        "name": "Deteccción de Humo ",
+        "tab": "8ef07724bfb2949c",
+        "order": 4,
+        "disp": true,
+        "width": 9,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "8ef07724bfb2949c",
+        "type": "ui_tab",
+        "name": "Security UCuencaTec",
+        "icon": "dashboard",
+        "order": 3,
+        "disabled": false,
+        "hidden": false
+    }
+]
